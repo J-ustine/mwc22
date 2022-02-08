@@ -1,6 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-export default function FormPersonalData() {
+export default function FormPersonalData(props) {
+  function handleInputChange(e) {
+    const type = e.target.id;
+    props.setUser((prev) => ({ ...prev, [type]: e.target.value }));
+  }
+
   return (
     <form>
       <div className="mb-3">
@@ -12,6 +18,8 @@ export default function FormPersonalData() {
           className="form-control"
           id="userEmail"
           placeholder="Enter your email"
+          onChange={handleInputChange}
+          autoComplete="off"
         />
       </div>
       <div className="mb-3">
@@ -24,6 +32,8 @@ export default function FormPersonalData() {
           name="userName"
           id="userName"
           placeholder="Enter your full name"
+          onChange={handleInputChange}
+          autoComplete="nope"
         />
       </div>
       <div className="mb-3">
@@ -37,6 +47,8 @@ export default function FormPersonalData() {
           cols="60"
           rows="3"
           placeholder="Enter a short description of you"
+          onChange={handleInputChange}
+          autoComplete="nope"
         ></textarea>
       </div>
       <div className="mb-3">
@@ -49,6 +61,8 @@ export default function FormPersonalData() {
           name="userCity"
           id="userCity"
           placeholder="Enter your city"
+          onChange={handleInputChange}
+          autoComplete="nope"
         />
       </div>
       <div className="mb-3">
@@ -61,11 +75,18 @@ export default function FormPersonalData() {
           name="userCountry"
           id="userCountry"
           placeholder="Enter your country"
+          onChange={handleInputChange}
+          autoComplete="nope"
         />
       </div>
-      <button type="submit" className="btn btn-primary">
+      <Link
+        to="/professionalData"
+        className="btn btn-primary"
+        aria-current="page"
+        onClick={console.log(props.user)}
+      >
         Save
-      </button>
+      </Link>
     </form>
   );
 }
