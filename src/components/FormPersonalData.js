@@ -83,7 +83,6 @@ export default function FormPersonalData(props) {
         to="/professionalData"
         className="btn btn-primary"
         aria-current="page"
-        onClick={console.log(props.user)}
       >
         Save
       </Link>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function FormProfessionalData(props) {
   function handleInputChange(e) {
@@ -63,9 +64,9 @@ export default function FormProfessionalData(props) {
           onChange={handleInputChange}
         />
       </div>
-      <button type="submit" className="btn btn-primary">
+      <Link to="/profile" className="btn btn-primary" aria-current="page">
         Save
-      </button>
+      </Link>
     </form>
   );
 }

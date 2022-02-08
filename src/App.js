@@ -62,10 +62,7 @@ function App() {
           path="professionalData"
           element={<FormProfessionalData user={user} setUser={setUser} />}
         />
-        <Route
-          path="profile"
-          element={<Profile user={user} setUser={setUser} />}
-        />
+        <Route path="profile" element={<Profile user={user} />} />
       </Routes>
     </div>
   );
