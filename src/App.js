@@ -50,9 +50,17 @@ function App() {
     userSector: "",
     userSkills: [],
   });
+  const activeLink = "nav-link active";
+  const nonActiveLink = "nav-link";
+  const [isActive, setIsActive] = useState(true);
   return (
     <div className="App">
-      <NavBar />
+      <NavBar
+        activeLink={activeLink}
+        nonActiveLink={nonActiveLink}
+        isActive={isActive}
+        setIsActive={setIsActive}
+      />
       <Routes>
         <Route
           path="/"
@@ -60,7 +68,14 @@ function App() {
         />
         <Route
           path="professionalData"
-          element={<FormProfessionalData user={user} setUser={setUser} />}
+          element={
+            <FormProfessionalData
+              user={user}
+              setUser={setUser}
+              isActive={isActive}
+              setIsActive={setIsActive}
+            />
+          }
         />
         <Route path="profile" element={<Profile user={user} />} />
       </Routes>

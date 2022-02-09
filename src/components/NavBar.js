@@ -2,7 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "./logo.jpg";
 
-export default function NavBar() {
+export default function NavBar(props) {
+  function updateActiveLink() {
+    props.setIsActive(!props.isActive);
+  }
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light">
       <div className="container-fluid">
@@ -20,10 +24,23 @@ export default function NavBar() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
-            <Link to="/" className="nav-link active" aria-current="page">
+            <Link
+              to="/"
+              className={
+                props.isActive ? props.activeLink : props.nonActiveLink
+              }
+              aria-current="page"
+              onClick={updateActiveLink}
+            >
               User
             </Link>
-            <Link to="/profile" className="nav-link">
+            <Link
+              to="/profile"
+              className={
+                props.isActive ? props.nonActiveLink : props.activeLink
+              }
+              onClick={updateActiveLink}
+            >
               Profile
             </Link>
           </div>

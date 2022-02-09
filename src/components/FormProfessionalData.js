@@ -22,6 +22,7 @@ export default function FormProfessionalData(props) {
 
   function goToProfile() {
     props.setUser((prev) => ({ ...prev, userSkills: skills }));
+    props.setIsActive(false);
   }
 
   return (

@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope, faPaperPlane } from "@fortawesome/free-regular-svg-icons";
 
 export default function Profile(props) {
   const mailto = `mailto:${props.user.userEmail}`;
@@ -15,19 +17,25 @@ export default function Profile(props) {
       </div>
       <div className="mb-2 big">{props.user.userName.toUpperCase()}</div>
       <div className="mb-2 sector">{props.user.userSector.toUpperCase()}</div>
-      <div className="mb-3 data">
+      <div className="mb-3 data description">
         <em>{props.user.userDescription}</em>
       </div>
 
       <div className="mb-3 data">
         {props.user.userEmail ? (
-          <a href={mailto}>{props.user.userEmail}</a>
+          <div>
+            <FontAwesomeIcon icon={faEnvelope} className="icon" />{" "}
+            <a href={mailto}>{props.user.userEmail}</a>
+          </div>
         ) : null}
       </div>
       <div className="mb-3 data">
-        {props.user.userCity && props.user.userCountry
-          ? props.user.userCity + " - " + props.user.userCountry
-          : null}
+        {props.user.userCity && props.user.userCountry ? (
+          <div>
+            <FontAwesomeIcon icon={faPaperPlane} className="icon" />{" "}
+            {props.user.userCity} - {props.user.userCountry}
+          </div>
+        ) : null}
       </div>
       <div className="mb-3 data">
         {props.user.userYearExperience

@@ -17,13 +17,19 @@ form {
   background-image: url("https://barcelonadigitaltalent.com/app/uploads/sites/3/2022/01/BDT_Header_Home_4YFN-scaled.jpg");
 }
 
+.big,
+.sector,
+.data,
+.data a {
+  width: 70%;
+  margin: 20px auto;
+}
+
 .big {
   background: #ffc400;
   color: #ffffff;
   font-size: 55px;
   font-weight: 900;
-  width: 50%;
-  margin: 0 auto;
 }
 
 .data,
@@ -37,8 +43,6 @@ form {
   background-color: #ffffff;
   font-size: 25px;
   font-weight: 700;
-  width: 50%;
-  margin: 0 auto;
 }
 
 .emptyProfile {
@@ -53,4 +57,9 @@ form {
   margin: 5px;
   font-weight: 600;
   border-radius: 30px;
+}
+
+.icon {
+  color: #ffc400;
+  margin-left: 5px;
 }
