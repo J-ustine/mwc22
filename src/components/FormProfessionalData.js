@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function FormProfessionalData(props) {
   const [skill, setSkill] = useState("");
-  const [skills, setSkills] = useState([]);
+  const [skills, setSkills] = useState(props.user.userSkills);
 
   function handleInputChange(e) {
     const type = e.target.id;
@@ -94,7 +94,11 @@ export default function FormProfessionalData(props) {
               Add
             </button>
           </div>
-          {skills}
+          {skills.map((item, index) => (
+            <div className="tag" key={index}>
+              {item}
+            </div>
+          ))}
         </div>
         <Link
           to="/profile"

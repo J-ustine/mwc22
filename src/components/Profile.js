@@ -14,7 +14,7 @@ export default function Profile(props) {
         />
       </div>
       <div className="mb-2 big">{props.user.userName.toUpperCase()}</div>
-      <div className="mb-2 data">{props.user.userSector.toUpperCase()}</div>
+      <div className="mb-2 sector">{props.user.userSector.toUpperCase()}</div>
       <div className="mb-3 data">
         <em>{props.user.userDescription}</em>
       </div>
@@ -34,7 +34,13 @@ export default function Profile(props) {
           ? props.user.userYearExperience + " years of experience"
           : null}
       </div>
-      <div className="mb-3 data ">{props.user.userSkills}</div>
+      <div className="mb-3 data">
+        {props.user.userSkills.map((item, index) => (
+          <div className="tag" key={index}>
+            {item}{" "}
+          </div>
+        ))}
+      </div>
     </div>
   ) : (
     <div className="content emptyProfile">
