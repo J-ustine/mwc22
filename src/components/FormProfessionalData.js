@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function FormProfessionalData(props) {
   const [skill, setSkill] = useState("");
-  let skills = [];
+  const [skills, setSkills] = useState([]);
 
   function handleInputChange(e) {
     const type = e.target.id;
@@ -16,10 +16,12 @@ export default function FormProfessionalData(props) {
 
   function addTag(e) {
     e.preventDefault();
-    skills.push(skill);
-    console.log(skills);
+    setSkills((prev) => [...prev, skill]);
     setSkill("");
-    // props.setUser((prev) => ({ ...prev, userSkills: skills }));
+  }
+
+  function goToProfile() {
+    props.setUser((prev) => ({ ...prev, userSkills: skills }));
   }
 
   return (
@@ -92,9 +94,14 @@ export default function FormProfessionalData(props) {
               Add
             </button>
           </div>
-          {props.user.userSkills}
+          {skills}
         </div>
-        <Link to="/profile" className="btn btn-warning" aria-current="page">
+        <Link
+          to="/profile"
+          className="btn btn-warning"
+          aria-current="page"
+          onClick={goToProfile}
+        >
           Save
         </Link>
       </form>
