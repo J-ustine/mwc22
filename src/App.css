@@ -1,9 +1,43 @@
 .App {
   text-align: center;
+  color: #ffffff;
 }
 
 @media (prefers-reduced-motion: no-preference) {
 }
 
-.App-header {
+form {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.content {
+  min-height: 100vh;
+  padding: 30px;
+  background-image: url("https://barcelonadigitaltalent.com/app/uploads/sites/3/2022/01/BDT_Header_Home_4YFN-scaled.jpg");
+}
+
+.big {
+  background: #ffc400;
+  color: #ffffff;
+  font-size: 55px;
+  font-weight: 900;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.data,
+.data a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.emptyProfile {
+  padding: 30vh;
+  font-size: 35px;
+}
+
+.tag {
+  background-color: rgba(255, 255, 0, 0.671);
+  border-radius: 30px;
 }

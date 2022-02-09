@@ -40,8 +40,8 @@ function App() {
   const randomNumber = Math.ceil(Math.random() * 28);
   const avatar = `https://joeschmoe.io/api/v1/${schmoe[randomNumber]}`;
   const [user, setUser] = useState({
-    userEmail: "",
     userName: "",
+    userEmail: "",
     userDescription: "",
     userCity: "",
     userCountry: "",

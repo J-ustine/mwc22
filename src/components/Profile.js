@@ -1,8 +1,10 @@
 import React from "react";
 
 export default function Profile(props) {
-  return (
-    <div className="userdata">
+  const mailto = `mailto:${props.user.userEmail}`;
+
+  return props.user.userName ? (
+    <div className="userdata content">
       <div className="mb-3">
         <img
           src={props.user.avatar}
@@ -11,16 +13,32 @@ export default function Profile(props) {
           style={{ borderRadius: "100%" }}
         />
       </div>
-      <div className="mb-3">Email address : {props.user.userEmail}</div>
-      <div className="mb-3">Full Name : {props.user.userName}</div>
-      <div className="mb-3">Description : {props.user.userDescription}</div>
-      <div className="mb-3">City : {props.user.userCity}</div>
-      <div className="mb-3">Country : {props.user.userCountry}</div>
-      <div className="mb-3">
-        Years of experience : {props.user.userYearExperience}
+      <div className="mb-2 big">{props.user.userName.toUpperCase()}</div>
+      <div className="mb-2 data">{props.user.userSector.toUpperCase()}</div>
+      <div className="mb-3 data">
+        <em>{props.user.userDescription}</em>
       </div>
-      <div className="mb-3">Sector : {props.user.userSector}</div>
-      <div className="mb-3">Skills : {props.user.userSkills}</div>
+
+      <div className="mb-3 data">
+        {props.user.userEmail ? (
+          <a href={mailto}>{props.user.userEmail}</a>
+        ) : null}
+      </div>
+      <div className="mb-3 data">
+        {props.user.userCity && props.user.userCountry
+          ? props.user.userCity + " - " + props.user.userCountry
+          : null}
+      </div>
+      <div className="mb-3 data">
+        {props.user.userYearExperience
+          ? props.user.userYearExperience + " years of experience"
+          : null}
+      </div>
+      <div className="mb-3 data ">{props.user.userSkills}</div>
+    </div>
+  ) : (
+    <div className="content emptyProfile">
+      Please update your data in the user section
     </div>
   );
 }
