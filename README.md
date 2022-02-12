@@ -1,6 +1,6 @@
 # The Barcelona Digital Talent app
 I had for this challenge to put myself in the role that Barcelona Digital Talent has hired you to develop the previous website. 
-This proyect has been built for the 4YFN - MWCBarcelona 2021 organized by [NUME](https://nuwe.io/business/event/mwc-22?utm_source=social&utm_medium=discord&utm_campaign=mwc22/).
+This proyect has been built for the 4YFN - MWCBarcelona 2021 Hackathon organized by [NUME](https://nuwe.io/business/event/mwc-22?utm_source=social&utm_medium=discord&utm_campaign=mwc22/).
 
 # Requirements
 
