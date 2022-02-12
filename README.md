@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+# The Barcelona Digital Talent app
+I had for this challenge to put myself in the role that Barcelona Digital Talent has hired you to develop the previous website. 
+This proyect has been built for the 4YFN - MWCBarcelona 2021 organized by [NUME](https://nuwe.io/business/event/mwc-22?utm_source=social&utm_medium=discord&utm_campaign=mwc22/).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Requirements
 
-## Available Scripts
+User stories to be met:
 
-In the project directory, you can run:
+* Form that allows you to enter the following data: email, full name, brief description, country and city of residence.
+* Generate an avatar of the person randomly (it can be using an API, colors, etc.)
+* Form that allows entering professional data: years of experience, sector (Front, Back, Mobile or Data), skills: (can be added freely)
+* The skills appear in tag format somewhere in the profile
+* A view that allows you to see the entire user profile with the previous data
 
-### `npm start`
+# Project access
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+You will be able to access this project by running the following command :
+`npm start`
+<br/>
+You can also see the project [here](https://inspiring-carson-abe46c.netlify.app).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Documentation Decisions taken
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**React** was chosen for this project for its ability to be fast, scalable, and simple.
+<br/>
+**React-router** was preferred in this project because it allows us to build a single-page web application with navigation without the page refreshing as the user navigates.
+<br/>
+**Bootstrap** was chosen for this project because it able me to quickly create features using predefined classes and design templates that are provided by bootstrap.
