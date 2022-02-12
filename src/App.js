@@ -8,6 +8,7 @@ import NavBar from "./components/NavBar";
 
 function App() {
   const schmoe = [
+    // list of avatar available
     "jacqueline",
     "jude",
     "jia",
@@ -37,9 +38,10 @@ function App() {
     "jana",
     "jenni",
   ];
-  const randomNumber = Math.ceil(Math.random() * 28);
-  const avatar = `https://joeschmoe.io/api/v1/${schmoe[randomNumber]}`;
+  const randomNumber = Math.ceil(Math.random() * 28); // generate a random number to attribute a random avatar
+  const avatar = `https://joeschmoe.io/api/v1/${schmoe[randomNumber]}`; //apicall to generate an avatar
   const [user, setUser] = useState({
+    // object to keep user data
     userName: "",
     userEmail: "",
     userDescription: "",
@@ -50,9 +52,9 @@ function App() {
     userSector: "",
     userSkills: [],
   });
-  const activeLink = "nav-link active";
-  const nonActiveLink = "nav-link";
-  const [isActive, setIsActive] = useState(true);
+  const activeLink = "nav-link active"; // classname of the active link
+  const nonActiveLink = "nav-link"; // classname of the inactive link
+  const [isActive, setIsActive] = useState(true); // variable to store if the link is active or not
   return (
     <div className="App">
       <NavBar

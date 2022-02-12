@@ -4,6 +4,7 @@ import logo from "./logo.jpg";
 
 export default function NavBar(props) {
   function updateActiveLink() {
+    // active or desactive the isActive variable on click
     props.setIsActive(!props.isActive);
   }
 
@@ -27,19 +28,19 @@ export default function NavBar(props) {
             <Link
               to="/"
               className={
-                props.isActive ? props.activeLink : props.nonActiveLink
+                props.isActive ? props.activeLink : props.nonActiveLink // change the style depends if the link is active or not
               }
               aria-current="page"
-              onClick={updateActiveLink}
+              onClick={updateActiveLink} // active or desactive the isActive variable on click
             >
               User
             </Link>
             <Link
               to="/profile"
               className={
-                props.isActive ? props.nonActiveLink : props.activeLink
+                props.isActive ? props.nonActiveLink : props.activeLink // change the style depends if the link is active or not
               }
-              onClick={updateActiveLink}
+              onClick={updateActiveLink} // active or desactive the isActive variable on click
             >
               Profile
             </Link>

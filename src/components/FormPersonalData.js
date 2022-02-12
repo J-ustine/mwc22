@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 export default function FormPersonalData(props) {
   function handleInputChange(e) {
-    const type = e.target.id;
-    props.setUser((prev) => ({ ...prev, [type]: e.target.value }));
+    const type = e.target.id; // keep the key of the input updated by user
+    props.setUser((prev) => ({ ...prev, [type]: e.target.value })); // update the value of the key in the user object
   }
 
   return (
@@ -20,9 +20,9 @@ export default function FormPersonalData(props) {
             name="userName"
             id="userName"
             placeholder="Enter your full name"
-            onChange={handleInputChange}
+            onChange={handleInputChange} // on change keep value enter by user
             autoComplete="nope"
-            value={props.user.userName}
+            value={props.user.userName} // add dynamic value to controlled the component
           />
         </div>
         <div className="mb-3">
@@ -34,9 +34,9 @@ export default function FormPersonalData(props) {
             className="form-control"
             id="userEmail"
             placeholder="Enter your email"
-            onChange={handleInputChange}
+            onChange={handleInputChange} // on change keep value enter by user
             autoComplete="off"
-            value={props.user.userEmail}
+            value={props.user.userEmail} // add dynamic value to controlled the component
           />
         </div>
         <div className="mb-3">
@@ -50,9 +50,9 @@ export default function FormPersonalData(props) {
             cols="60"
             rows="3"
             placeholder="Enter a short description of you"
-            onChange={handleInputChange}
+            onChange={handleInputChange} // on change keep value enter by user
             autoComplete="nope"
-            value={props.user.userDescription}
+            value={props.user.userDescription} // add dynamic value to controlled the component
           ></textarea>
         </div>
         <div className="mb-3">
@@ -65,9 +65,9 @@ export default function FormPersonalData(props) {
             name="userCity"
             id="userCity"
             placeholder="Enter your city"
-            onChange={handleInputChange}
+            onChange={handleInputChange} // on change keep value enter by user
             autoComplete="nope"
-            value={props.user.userCity}
+            value={props.user.userCity} // add dynamic value to controlled the component
           />
         </div>
         <div className="mb-3">
@@ -80,15 +80,16 @@ export default function FormPersonalData(props) {
             name="userCountry"
             id="userCountry"
             placeholder="Enter your country"
-            onChange={handleInputChange}
+            onChange={handleInputChange} // on change keep value enter by user
             autoComplete="nope"
-            value={props.user.userCountry}
+            value={props.user.userCountry} // add dynamic value to controlled the component
           />
         </div>
         <Link
           to="/professionalData"
           className="btn btn-warning"
           aria-current="page"
+          type="submit"
         >
           Next
         </Link>

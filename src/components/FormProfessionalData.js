@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function FormProfessionalData(props) {
-  const [skill, setSkill] = useState("");
-  const [skills, setSkills] = useState(props.user.userSkills);
+  const [skill, setSkill] = useState(""); // variable to keep the skill to add to the user profile
+  const [skills, setSkills] = useState(props.user.userSkills); // object of added skills
 
   function handleInputChange(e) {
-    const type = e.target.id;
-    props.setUser((prev) => ({ ...prev, [type]: e.target.value }));
+    const type = e.target.id; // keep the key of the input updated by user
+    props.setUser((prev) => ({ ...prev, [type]: e.target.value })); // update the value of the key in the user object
   }
 
   function addSkills(e) {
@@ -106,6 +106,7 @@ export default function FormProfessionalData(props) {
           className="btn btn-warning"
           aria-current="page"
           onClick={goToProfile}
+          type="submit"
         >
           Save
         </Link>

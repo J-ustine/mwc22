@@ -5,7 +5,7 @@ import { faEnvelope, faPaperPlane } from "@fortawesome/free-regular-svg-icons";
 export default function Profile(props) {
   const mailto = `mailto:${props.user.userEmail}`;
 
-  return props.user.userName ? (
+  return props.user.userName ? ( //if data user is filled, display profile section
     <div className="userdata content">
       <div className="mb-3">
         <img
@@ -51,6 +51,7 @@ export default function Profile(props) {
       </div>
     </div>
   ) : (
+    // if user didn't update his data in the user section, profile section will be empty and redirect message will be display
     <div className="content emptyProfile">
       Please update your data in the user section
     </div>
