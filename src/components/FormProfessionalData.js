@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Avatar from "avataaars";
 
 export default function FormProfessionalData(props) {
   const [skill, setSkill] = useState(""); // variable to keep the skill to add to the user profile
@@ -29,11 +30,19 @@ export default function FormProfessionalData(props) {
     <div className="content">
       <form>
         <div className="mb-3">
-          <img
-            src={props.user.avatar}
-            alt=""
-            width={200}
-            style={{ borderRadius: "100%" }}
+          <Avatar
+            style={{ width: "200px", height: "200px" }}
+            avatarStyle="Circle"
+            topType="LongHairMiaWallace"
+            accessoriesType="Prescription02"
+            hairColor="BrownDark"
+            facialHairType="Blank"
+            clotheType="Hoodie"
+            clotheColor="PastelBlue"
+            eyeType="Happy"
+            eyebrowType="Default"
+            mouthType="Smile"
+            skinColor="Light"
           />
         </div>
         <div className="mb-3">
